@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tacos N' Stuff — Cohoes, NY</title>
+    <meta
+      name="description"
+      content="Modern tacos in Cohoes, NY. Street tacos, quesabirria, quesadillas, nachos, and more."
+    />
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#home">Skip to content</a>
+
+    <!-- SVG icon sprite -->
+    <svg width="0" height="0" class="sr-only" aria-hidden="true" focusable="false">
+      <symbol id="i-fire" viewBox="0 0 24 24">
+        <path
+          d="M12.5 2.5c.6 2.6-.2 4.5-1.7 6.1C9.2 10.2 8.6 12 9.2 14c.7 2.3 3 3.6 5.2 3.2 3.3-.7 5.4-4 4.2-7.4-.6-1.6-1.8-3-3.7-4.4-.9-.7-1.6-1.8-1.7-2.9Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M10.6 21.2c-2.9-.6-4.8-3.2-4.5-6.1.2-1.9 1.2-3.5 2.9-4.8.7-.5 1.2-1.1 1.4-1.8.3 1.2.9 2 1.6 2.8 1.1 1.2 1.7 2.4 1.5 3.9-.3 2.4-2.5 4.4-4.9 4Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          opacity="0.9"
+        />
+      </symbol>
+
+      <symbol id="i-taco" viewBox="0 0 24 24">
+        <path
+          d="M20 16c-2.3 3.7-6.7 6-11.3 5.4-3.1-.4-4.3-3.1-3.8-5.9C5.8 10.5 10.9 6.5 17 6.5c2.1 0 3.8 1.7 3.8 3.8 0 1.2-.6 2.5-.8 3.7Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M7.2 16.8c1 .4 2.4.2 3.3-.7.8-.8 2.3-.9 3.1-.1.8.8 2.4.8 3.2 0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          opacity="0.9"
+        />
+      </symbol>
+
+      <symbol id="i-quesadilla" viewBox="0 0 24 24">
+        <path
+          d="M4.5 16.5 9.5 6.5c.5-1 1.8-1.4 2.8-.9l8 4c1 .5 1.4 1.8.9 2.8l-5 10c-.5 1-1.8 1.4-2.8.9l-8-4c-1-.5-1.4-1.8-.9-2.8Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M9 11.2h.01M12 12.7h.01M15 14.2h.01"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+        />
+      </symbol>
+
+      <symbol id="i-nachos" viewBox="0 0 24 24">
+        <path
+          d="M4 18.2 10.4 5.8c.6-1.1 2.2-1.1 2.8 0L20 18.2c.5 1-.2 2.2-1.4 2.2H5.4c-1.2 0-2-1.2-1.4-2.2Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M9 16c.9-1 2.1-1 3 0s2.1 1 3 0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          opacity="0.9"
+        />
+      </symbol>
+
+      <symbol id="i-family" viewBox="0 0 24 24">
+        <path
+          d="M8 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm8 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M3.8 20.3c.5-3 3-5.3 6.2-5.3s5.7 2.3 6.2 5.3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M11 19.7c.4-2.6 2.6-4.7 5.4-4.7 2.8 0 5 2.1 5.4 4.7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          opacity="0.9"
+        />
+      </symbol>
+
+      <symbol id="i-bag" viewBox="0 0 24 24">
+        <path
+          d="M7 8V7a5 5 0 0 1 10 0v1"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+        <path
+          d="M6.5 8h11c1 0 1.8.8 1.8 1.8l-.8 10.6c-.1 1-.9 1.8-1.9 1.8H7.4c-1 0-1.8-.8-1.9-1.8l-.8-10.6c0-1 .8-1.8 1.8-1.8Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path
+          d="M12 22s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12 12.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <path
+          d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12 6v6l4 2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path
+          d="m12 2.6 2.9 6 6.6 1-4.8 4.7 1.1 6.6-5.8-3.1-5.8 3.1 1.1-6.6-4.8-4.7 6.6-1 2.9-6Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+    </svg>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Tacos N' Stuff Home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg class="icon icon-lg"><use href="#i-taco"></use></svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Tacos N' Stuff</span>
+            <span class="brand-sub">Cohoes, NY</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="nav-toggle-bars" aria-hidden="true"></span>
+          </button>
+
+          <div class="nav-links" id="navLinks">
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#menu">Menu</a>
+            <a class="nav-link" href="#location">Location</a>
+            <a class="nav-link nav-cta" href="#order">
+              <svg class="icon"><use href="#i-bag"></use></svg>
+              Order Now
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="hero-bg" role="img" aria-label="Tacos on a plate"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <div class="rating-row">
+              <a
+                class="rating-pill"
+                href="https://www.google.com/search?q=Tacos+N%27+Stuff+Cohoes+NY+reviews"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open Google reviews (new tab)"
+              >
+                <svg class="icon"><use href="#i-star"></use></svg>
+                <span><strong>4.9</strong> on Google</span>
+                <span class="rating-stars" aria-hidden="true">★★★★★</span>
+              </a>
+
+              <span class="meta-pill">
+                <svg class="icon"><use href="#i-pin"></use></svg>
+                86 Remsen St, Cohoes, NY 12047
+              </span>
+            </div>
+
+            <h1 class="hero-title">
+              Big flavor. Clean build.
+              <span class="accent">Street tacos</span> done right.
+            </h1>
+
+            <p class="hero-subtitle">
+              Fast pickup, bold fillings, and a menu built for cravings—tacos, quesabirria, nachos, and family packs.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#order">
+                <svg class="icon"><use href="#i-bag"></use></svg>
+                Start an Order
+              </a>
+              <a class="btn btn-secondary" href="#menu">
+                View Menu
+              </a>
+            </div>
+
+            <div class="hero-highlights" aria-label="Highlights">
+              <div class="highlight">
+                <svg class="icon"><use href="#i-clock"></use></svg>
+                <span><strong>Pickup</strong> ready when you are</span>
+              </div>
+              <div class="highlight">
+                <svg class="icon"><use href="#i-fire"></use></svg>
+                <span><strong>Vibrant</strong> flavors, modern vibe</span>
+              </div>
+              <div class="highlight">
+                <svg class="icon"><use href="#i-pin"></use></svg>
+                <span><strong>Cohoes</strong> local favorite</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" id="order" aria-label="Quick order card">
+            <div class="hero-card-top">
+              <h2 class="hero-card-title">Order in seconds</h2>
+              <p class="hero-card-sub">
+                Tap below to order for pickup or delivery.
+              </p>
+            </div>
+
+            <div class="hero-card-actions">
+              <a class="btn btn-primary btn-block" href="#location">
+                <svg class="icon"><use href="#i-pin"></use></svg>
+                Get Directions
+              </a>
+              <a
+                class="btn btn-secondary btn-block"
+                href="https://www.google.com/search?q=Tacos+N%27+Stuff+86+Remsen+St+Cohoes+NY+12047"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg class="icon"><use href="#i-star"></use></svg>
+                Read Reviews
+              </a>
+            </div>
+
+            <div class="hero-card-foot">
+              <div class="mini">
+                <span class="mini-k">Pickup hours</span>
+                <span class="mini-v">See schedule below</span>
+              </div>
+              <div class="mini">
+                <span class="mini-k">Rating</span>
+                <span class="mini-v">4.9 / 5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENU -->
+      <section class="section" id="menu">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Menu</h2>
+            <p class="section-subtitle">Tap a category to explore. Prices shown are “starting at”.</p>
+          </div>
+
+          <div class="tabs" data-tabs>
+            <div class="tablist" role="tablist" aria-label="Menu categories">
+              <button class="tab" role="tab" aria-selected="true" data-tab="tacos">
+                <svg class="icon"><use href="#i-taco"></use></svg>
+                Tacos
+              </button>
+              <button class="tab" role="tab" aria-selected="false" data-tab="quesadillas" tabindex="-1">
+                <svg class="icon"><use href="#i-quesadilla"></use></svg>
+                Quesadillas
+              </button>
+              <button class="tab" role="tab" aria-selected="false" data-tab="nachos" tabindex="-1">
+                <svg class="icon"><use href="#i-nachos"></use></svg>
+                Nachos &amp; Salads
+              </button>
+              <button class="tab" role="tab" aria-selected="false" data-tab="family" tabindex="-1">
+                <svg class="icon"><use href="#i-family"></use></svg>
+                Family Pack &amp; Extras
+              </button>
+            </div>
+
+            <div class="panels">
+              <div class="panel" role="tabpanel" data-panel="tacos">
+                <div class="menu-grid">
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>4” Street Tacos</h3>
+                      <span class="price">$4.10+</span>
+                    </div>
+                    <p class="menu-desc">Classic street-style tacos with bold, fresh flavor.</p>
+                    <div class="menu-tags">
+                      <span class="tag"><svg class="icon"><use href="#i-fire"></use></svg> Popular</span>
+                    </div>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>6" Quesabirria</h3>
+                      <span class="price">$12.90+</span>
+                    </div>
+                    <p class="menu-desc">Melty, savory, and packed with rich birria flavor.</p>
+                    <div class="menu-tags">
+                      <span class="tag"><svg class="icon"><use href="#i-fire"></use></svg> Signature</span>
+                    </div>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>6" Korean Steak</h3>
+                      <span class="price">$12.90+</span>
+                    </div>
+                    <p class="menu-desc">Sweet-heat steak with a modern fusion edge.</p>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>6" Pork &amp; Pineapple</h3>
+                      <span class="price">$11.70+</span>
+                    </div>
+                    <p class="menu-desc">Smoky pork with bright pineapple balance.</p>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>6" Tex-Mex</h3>
+                      <span class="price">$11.70+</span>
+                    </div>
+                    <p class="menu-desc">Classic comfort flavors with a bold finish.</p>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>6" Shrimp</h3>
+                      <span class="price">$12.90+</span>
+                    </div>
+                    <p class="menu-desc">Juicy shrimp with a crisp, punchy profile.</p>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>6" Veggie</h3>
+                      <span class="price">$9.35+</span>
+                    </div>
+                    <p class="menu-desc">Bright, satisfying veggie-forward option.</p>
+                  </article>
+                </div>
+              </div>
+
+              <div class="panel" role="tabpanel" data-panel="quesadillas" hidden>
+                <div class="menu-grid">
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>12" Quesadilla</h3>
+                      <span class="price">$9.35+</span>
+                    </div>
+                    <p class="menu-desc">Crisp outside, melty inside—simple, perfect.</p>
+                    <div class="menu-tags">
+                      <span class="tag"><svg class="icon"><use href="#i-quesadilla"></use></svg> Crowd-pleaser</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <div class="panel" role="tabpanel" data-panel="nachos" hidden>
+                <div class="menu-grid">
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>Taco Salad</h3>
+                      <span class="price">$14.05+</span>
+                    </div>
+                    <p class="menu-desc">Big, fresh, and loaded—crunch included.</p>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>Nachos</h3>
+                      <span class="price">$11.70+</span>
+                    </div>
+                    <p class="menu-desc">Crispy chips, melty goodness, and bold toppings.</p>
+                    <div class="menu-tags">
+                      <span class="tag"><svg class="icon"><use href="#i-nachos"></use></svg> Shareable</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <div class="panel" role="tabpanel" data-panel="family" hidden>
+                <div class="menu-grid">
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>Family Pack</h3>
+                      <span class="price">$64.35</span>
+                    </div>
+                    <p class="menu-desc">Easy win for groups—feed the table fast.</p>
+                    <div class="menu-tags">
+                      <span class="tag"><svg class="icon"><use href="#i-family"></use></svg> Best value</span>
+                    </div>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>Mexican Soda</h3>
+                      <span class="price">$2.95</span>
+                    </div>
+                    <p class="menu-desc">Crisp, cold, and perfect with tacos.</p>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>Can Soda</h3>
+                      <span class="price">$2.35</span>
+                    </div>
+                    <p class="menu-desc">Classic refreshers.</p>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>Water</h3>
+                      <span class="price">$2.35</span>
+                    </div>
+                    <p class="menu-desc">Simple and essential.</p>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>Extra Meat</h3>
+                      <span class="price">$3.50</span>
+                    </div>
+                    <p class="menu-desc">Turn it up—add more protein.</p>
+                  </article>
+
+                  <article class="menu-item">
+                    <div class="menu-item-top">
+                      <h3>Extra Shrimp</h3>
+                      <span class="price">$3.50</span>
+                    </div>
+                    <p class="menu-desc">Add a little extra bite.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-foot">
+            <a class="btn btn-primary" href="#order">
+              <svg class="icon"><use href="#i-bag"></use></svg>
+              Order Now
+            </a>
+            <a class="btn btn-secondary" href="#location">
+              <svg class="icon"><use href="#i-pin"></use></svg>
+              Find Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section class="section section-alt" id="reviews">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Reviews</h2>
+            <p class="section-subtitle">Real love from real customers.</p>
+          </div>
+
+          <div class="reviews-grid">
+            <figure class="review-card">
+              <div class="review-stars" aria-label="5 star rating">★★★★★</div>
+              <blockquote>
+                “Absolutely delicious — the flavors are on point every time. Fast pickup and always fresh.”
+              </blockquote>
+              <figcaption>— Kayla Burek</figcaption>
+            </figure>
+
+            <figure class="review-card">
+              <div class="review-stars" aria-label="5 star rating">★★★★★</div>
+              <blockquote>
+                “Hands-down one of the best spots around. The quesabirria is unreal.”
+              </blockquote>
+              <figcaption>— Fred Humiston</figcaption>
+            </figure>
+
+            <figure class="review-card">
+              <div class="review-stars" aria-label="5 star rating">★★★★★</div>
+              <blockquote>
+                “Great service and even better food. Perfect portion sizes and bold flavors.”
+              </blockquote>
+              <figcaption>— Cynthia Jacobson</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section class="section" id="location">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Location &amp; Hours</h2>
+            <p class="section-subtitle">Pickup and delivery times updated below.</p>
+          </div>
+
+          <div class="location-grid">
+            <div class="location-card">
+              <div class="location-top">
+                <div class="location-title">
+                  <svg class="icon icon-lg"><use href="#i-pin"></use></svg>
+                  <div>
+                    <h3>Visit us</h3>
+                    <p class="muted">86 Remsen St, Cohoes, NY 12047</p>
+                  </div>
+                </div>
+
+                <div class="location-actions">
+                  <a
+                    class="btn btn-primary"
+                    href="https://www.google.com/maps/search/?api=1&query=86%20Remsen%20St%2C%20Cohoes%2C%20NY%2012047"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg class="icon"><use href="#i-pin"></use></svg>
+                    Directions
+                  </a>
+                  <a
+                    class="btn btn-secondary"
+                    href="https://www.google.com/search?q=Tacos+N%27+Stuff+Cohoes+NY"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg class="icon"><use href="#i-star"></use></svg>
+                    Google Listing
+                  </a>
+                </div>
+              </div>
+
+              <div class="hours">
+                <div class="hours-head">
+                  <svg class="icon"><use href="#i-clock"></use></svg>
+                  <h4>Hours</h4>
+                </div>
+
+                <div class="hours-table" role="table" aria-label="Business hours">
+                  <div class="hours-row" role="row">
+                    <div class="hours-day" role="cell">Mon</div>
+                    <div class="hours-times" role="cell">Closed</div>
+                  </div>
+
+                  <div class="hours-row" role="row">
+                    <div class="hours-day" role="cell">Tue–Fri</div>
+                    <div class="hours-times" role="cell">
+                      <div class="hours-line"><span class="label">Pickup</span> 11:00am–7:20pm</div>
+                      <div class="hours-line"><span class="label">Delivery</span> 11:00am–7:20pm</div>
+                    </div>
+                  </div>
+
+                  <div class="hours-row" role="row">
+                    <div class="hours-day" role="cell">Sat</div>
+                    <div class="hours-times" role="cell">
+                      <div class="hours-line"><span class="label">Pickup</span> 2:00pm–7:20pm</div>
+                      <div class="hours-line"><span class="label">Delivery</span> 2:00pm–7:20pm</div>
+                    </div>
+                  </div>
+
+                  <div class="hours-row" role="row">
+                    <div class="hours-day" role="cell">Sun</div>
+                    <div class="hours-times" role="cell">Closed</div>
+                  </div>
+                </div>
+
+                <p class="hours-note muted">
+                  For the latest updates, check the Google listing.
+                </p>
+              </div>
+            </div>
+
+            <div class="map-card" aria-label="Map placeholder">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2928.652211717309!2d-73.7041277242551!3d42.77456007115736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de11d4ba3d0b33%3A0x99741247a5f98e7e!2s86%20Remsen%20St%2C%20Cohoes%2C%20NY%2012047!5e0!3m2!1sen!2sus!4v1775715501798!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER CTA -->
+      <section class="cta-band">
+        <div class="container cta-inner">
+          <div class="cta-copy">
+            <h2>Ready to eat?</h2>
+            <p>Order now and pick up fast in Cohoes.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="#order">
+              <svg class="icon"><use href="#i-bag"></use></svg>
+              Order Now
+            </a>
+            <a class="btn btn-secondary" href="#menu">View Menu</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <div class="footer-brand">
+            <svg class="icon icon-lg"><use href="#i-taco"></use></svg>
+            <div>
+              <div class="footer-name">Tacos N' Stuff</div>
+              <div class="footer-sub muted">86 Remsen St, Cohoes, NY 12047</div>
+            </div>
+          </div>
+        </div>
+Hw 
+        <div class="footer-right">
+          <a class="footer-link" href="#home">Home</a>
+          <a class="footer-link" href="#menu">Menu</a>
+          <a class="footer-link" href="#location">Location</a>
+          <a
+            class="footer-link"
+            href="https://www.google.com/search?q=Tacos+N%27+Stuff+Cohoes+NY+reviews"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Reviews
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
