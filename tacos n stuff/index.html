@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tacos N' Stuff | Cohoes, NY</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TACOS N' STUFF</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#menu" class="order-btn">Order Now</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <a href="https://www.google.com/search?q=Tacos+N%27+Stuff+Cohoes+Reviews" target="_blank" class="rating-link">
+                <div class="rating-wrapper">
+                    <span class="star-icon">★</span>
+                    <span class="rating-text">4.9 Rating on Google</span>
+                </div>
+            </a>
+            <h1>It's Always Taco Tuesday.</h1>
+            <p>Authentic Latin American Flavors in Downtown Cohoes.</p>
+            <div class="cta-group">
+                <a href="#menu" class="btn primary">View Full Menu</a>
+                <a href="tel:5182036219" class="btn secondary">Call (518) 203-6219</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" onclick="openMenu(event, 'tacos')">Tacos</button>
+                <button class="tab-btn" onclick="openMenu(event, 'quesadillas')">Quesadillas</button>
+                <button class="tab-btn" onclick="openMenu(event, 'nachos-salads')">Nachos & Salads</button>
+                <button class="tab-btn" onclick="openMenu(event, 'family-extras')">Family Pack & Extras</button>
+            </div>
+
+            <div id="tacos" class="menu-category active">
+                <div class="menu-item"><div class="item-text"><h3>4” Street Tacos</h3><p>Flour shell. Chicken, ground beef, pork carnitas, or chorizo. Onions, cilantro, lime, pico de gallo, guacamole.</p></div><span class="price">$4.10+</span></div>
+                <div class="menu-item"><div class="item-text"><h3>6" Quesabirria Taco</h3><p>Onions, cilantro, side of consommé, and tortilla chips.</p></div><span class="price">$12.90+</span></div>
+                <div class="menu-item"><div class="item-text"><h3>6" Korean Steak Taco</h3><p>Cucumber slaw, pickled onions, cilantro, garlic aioli.</p></div><span class="price">$12.90+</span></div>
+                <div class="menu-item"><div class="item-text"><h3>6" Pork & Pineapple Carnitas Taco</h3><p>Roasted pineapple, onion, cilantro, red sauce, pico de gallo, guacamole, and chips.</p></div><span class="price">$11.70+</span></div>
+                <div class="menu-item"><div class="item-text"><h3>6" Tex-Mex Tacos</h3><p>Chicken, ground beef, pork carnitas, or chorizo. Lettuce, tomato, cheese, pico, guacamole, sour cream, and chips.</p></div><span class="price">$11.70+</span></div>
+                <div class="menu-item"><div class="item-text"><h3>6" Shrimp Taco</h3><p>Sweet & spicy slaw, pickled onions, lime, cilantro.</p></div><span class="price">$12.90+</span></div>
+                <div class="menu-item"><div class="item-text"><h3>6" Veggie Taco</h3><p>Lettuce, tomato, onion, black beans, cilantro, cheese, pico, guacamole, sour cream, and chips.</p></div><span class="price">$9.35+</span></div>
+            </div>
+
+            <div id="quesadillas" class="menu-category">
+                <div class="menu-item"><div class="item-text"><h3>12" Quesadilla</h3><p>Flour tortilla and cheese blend. Served with pico de gallo, sour cream, and tortilla.</p></div><span class="price">$9.35+</span></div>
+            </div>
+
+            <div id="nachos-salads" class="menu-category">
+                <div class="menu-item"><div class="item-text"><h3>Taco Salad</h3><p>Lettuce, tomato, cheese, pickled onions, black beans, tortilla strips, pico de gallo, sour cream, and guacamole.</p></div><span class="price">$14.05+</span></div>
+                <div class="menu-item"><div class="item-text"><h3>Nachos</h3><p>Chips, queso cheese, tomato, onion, black beans, cilantro, pico de gallo, sour cream.</p></div><span class="price">$11.70+</span></div>
+            </div>
+
+            <div id="family-extras" class="menu-category">
+                <div class="sub-cat">Specials</div>
+                <div class="menu-item"><div class="item-text"><h3>Family Pack</h3><p>2 street tacos, 4 six-inch tacos, 1 regular nachos, 2 quesadillas, and 4 choice of any drinks.</p></div><span class="price">$64.35</span></div>
+                <div class="sub-cat">Drinks</div>
+                <div class="menu-item"><h3>Mexican Soda</h3><span class="price">$2.95</span></div>
+                <div class="menu-item"><h3>Can Soda</h3><span class="price">$2.35</span></div>
+                <div class="menu-item"><h3>Water</h3><span class="price">$2.35</span></div>
+                <div class="sub-cat">Add-ons</div>
+                <div class="menu-item"><h3>Extra Meat</h3><span class="price">$3.50</span></div>
+                <div class="menu-item"><h3>Extra Shrimp</h3><span class="price">$3.50</span></div>
+            </div>
+        </div>  
+    </section>
+
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="star-rating">★★★★★</div>
+                    <p class="review-text">"We’ve been 3 times and each time somehow it gets better. The portion sizes are large. Our kids enjoy the texmex tacos! Everything we’ve tried has been excellent."</p>
+                    <h4 class="reviewer">- Kayla Burek</h4>
+                </div>
+                <div class="review-card">
+                    <div class="star-rating">★★★★★</div>
+                    <p class="review-text">"Really delicious tacos, much more satisfying meal than I had anticipated. I got three tacos and I was quite full. And enjoyed every bite."</p>
+                    <h4 class="reviewer">- Fred Humiston</h4>
+                </div>
+                <div class="review-card">
+                    <div class="star-rating">★★★★★</div>
+                    <p class="review-text">"Great, fresh and flavorful food and a variety of options available! Loved the vibes of the staff and chef, seems like a great crew. We will definitely be back!!"</p>
+                    <h4 class="reviewer">- Cynthia Jacobson</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="location-section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <p>86 Remsen St, Cohoes, NY 12047</p>
+            <p><strong>Pickup Hours:</strong> 11:00am – 7:20pm</p>
+            <div class="map-box">Cohoes, NY</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Tacos N' Stuff. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tacos N' Stuff — Cohoes, NY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== SVG ICON DEFS ========== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <defs>
+
+      <!-- Taco: curved shell -->
+      <symbol id="icon-taco" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 22 C4 12, 28 12, 28 22"/>
+        <path d="M4 22 Q16 28 28 22"/>
+        <path d="M10 18 Q13 15 16 17"/>
+        <path d="M16 17 Q19 19 22 16"/>
+        <circle cx="13" cy="20" r="1" fill="currentColor" stroke="none"/>
+        <circle cx="19" cy="20" r="1" fill="currentColor" stroke="none"/>
+        <path d="M11 22 Q16 24 21 22"/>
+      </symbol>
+
+      <!-- Quesadilla: folded half-circle -->
+      <symbol id="icon-quesadilla" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 18 A10 10 0 0 1 26 18 Z"/>
+        <line x1="6" y1="18" x2="26" y2="18"/>
+        <path d="M10 14 Q16 11 22 14"/>
+        <circle cx="14" cy="15.5" r="1" fill="currentColor" stroke="none"/>
+        <circle cx="18" cy="14.5" r="1" fill="currentColor" stroke="none"/>
+      </symbol>
+
+      <!-- Bowl: for taco salad -->
+      <symbol id="icon-bowl" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 14 Q6 24 16 24 Q26 24 26 14 Z"/>
+        <line x1="6" y1="14" x2="26" y2="14"/>
+        <line x1="11" y1="27" x2="21" y2="27"/>
+        <line x1="16" y1="24" x2="16" y2="27"/>
+        <path d="M10 11 Q12 8 14 10" stroke-width="1.5"/>
+        <path d="M16 10 Q18 7 20 9" stroke-width="1.5"/>
+      </symbol>
+
+      <!-- Chips / nachos: stacked triangles -->
+      <symbol id="icon-nachos" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="16,6 26,22 6,22"/>
+        <polygon points="16,12 22,22 10,22" fill="currentColor" fill-opacity="0.12"/>
+        <line x1="6" y1="25" x2="26" y2="25"/>
+        <circle cx="16" cy="16" r="1.2" fill="currentColor" stroke="none"/>
+      </symbol>
+
+      <!-- House for Family Pack -->
+      <symbol id="icon-family" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 14 L16 5 L27 14"/>
+        <rect x="9" y="14" width="14" height="12" rx="1"/>
+        <path d="M13 26 L13 20 Q16 17 19 20 L19 26"/>
+        <line x1="5" y1="14" x2="27" y2="14"/>
+      </symbol>
+
+      <!-- Bottle for drinks -->
+      <symbol id="icon-drink" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="13" y="5" width="6" height="4" rx="1"/>
+        <path d="M13 9 Q9 12 9 16 L9 25 Q9 27 11 27 L21 27 Q23 27 23 25 L23 16 Q23 12 19 9 Z"/>
+        <line x1="9" y1="19" x2="23" y2="19"/>
+        <line x1="13" y1="5" x2="19" y2="5"/>
+      </symbol>
+
+      <!-- Plus circle for add-ons -->
+      <symbol id="icon-plus" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+        <circle cx="16" cy="16" r="11"/>
+        <line x1="16" y1="10" x2="16" y2="22"/>
+        <line x1="10" y1="16" x2="22" y2="16"/>
+      </symbol>
+
+      <!-- Shrimp: curved body with tail -->
+      <symbol id="icon-shrimp" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 7 Q26 10 24 17 Q22 24 15 25 Q9 26 8 21 Q7 16 12 14 Q17 12 18 16 Q19 20 15 21"/>
+        <path d="M20 7 Q18 4 22 4"/>
+        <path d="M15 25 Q13 28 10 27"/>
+        <path d="M15 25 Q14 28 16 29"/>
+      </symbol>
+
+      <!-- Leaf for veggie -->
+      <symbol id="icon-veggie" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 26 Q8 20 8 12 Q8 6 16 6 Q24 6 24 12 Q24 20 16 26 Z"/>
+        <line x1="16" y1="6" x2="16" y2="26"/>
+        <path d="M16 12 Q20 14 22 18"/>
+        <path d="M16 17 Q12 18 10 21"/>
+      </symbol>
+
+    </defs>
+  </svg>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav-header" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">Tacos N'&nbsp;<span>Stuff</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="#top">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#location">Location</a>
+        <a href="#order" class="btn-order">Order Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        
+      </a>
+      <h1>Authentic Flavor,<br /><span class="accent">Every Single Bite.</span></h1>
+      <p class="hero-sub">Handcrafted tacos, quesabirria, Korean steak, shrimp &amp; more — right in Cohoes, NY.</p>
+      <div class="hero-ctas">
+        <a href="#menu" class="btn btn-primary">Explore the Menu</a>
+        <a href="#order" class="btn btn-outline">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section class="section" id="menu">
+    <div class="container">
+      <span class="section-label">What We Serve</span>
+      <h2 class="section-title">Our Menu</h2>
+      <div class="tab-bar" role="tablist">
+        <button class="tab-btn active" data-tab="tacos" role="tab" aria-selected="true">Tacos</button>
+        <button class="tab-btn" data-tab="quesadillas" role="tab" aria-selected="false">Quesadillas</button>
+        <button class="tab-btn" data-tab="nachos" role="tab" aria-selected="false">Nachos &amp; Salads</button>
+        <button class="tab-btn" data-tab="extras" role="tab" aria-selected="false">Family &amp; Extras</button>
+      </div>
+
+      <!-- Tacos -->
+      <div class="tab-panel active" id="tab-tacos">
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-taco"/></svg></div>
+            <div class="menu-card-info">
+              <h3>4" Street Tacos</h3>
+              <p>Classic al pastor, chicken, or beef — small but mighty.</p>
+            </div>
+            <span class="menu-price">$4.10+</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-taco"/></svg></div>
+            <div class="menu-card-info">
+              <h3>6" Quesabirria</h3>
+              <p>Braised beef birria with consommé dipping broth.</p>
+            </div>
+            <span class="menu-price">$12.90+</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-taco"/></svg></div>
+            <div class="menu-card-info">
+              <h3>6" Korean Steak</h3>
+              <p>Marinated bulgogi-style steak with bold Korean flavors.</p>
+            </div>
+            <span class="menu-price">$12.90+</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-taco"/></svg></div>
+            <div class="menu-card-info">
+              <h3>6" Pork &amp; Pineapple</h3>
+              <p>Slow-roasted pork with fresh pineapple salsa.</p>
+            </div>
+            <span class="menu-price">$11.70+</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-taco"/></svg></div>
+            <div class="menu-card-info">
+              <h3>6" Tex-Mex</h3>
+              <p>Classic Tex-Mex spices with all the fixings.</p>
+            </div>
+            <span class="menu-price">$11.70+</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-shrimp"/></svg></div>
+            <div class="menu-card-info">
+              <h3>6" Shrimp</h3>
+              <p>Seasoned shrimp with zesty citrus slaw.</p>
+            </div>
+            <span class="menu-price">$12.90+</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-veggie"/></svg></div>
+            <div class="menu-card-info">
+              <h3>6" Veggie</h3>
+              <p>Roasted seasonal vegetables with avocado crema.</p>
+            </div>
+            <span class="menu-price">$9.35+</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quesadillas -->
+      <div class="tab-panel" id="tab-quesadillas">
+        <div class="menu-grid">
+          <div class="menu-card featured">
+            <div class="menu-card-icon"><svg><use href="#icon-quesadilla"/></svg></div>
+            <div class="menu-card-info">
+              <h3>12" Quesadilla</h3>
+              <p>Grilled flour tortilla loaded with melted cheese and your choice of filling.</p>
+            </div>
+            <span class="menu-price">$9.35+</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nachos & Salads -->
+      <div class="tab-panel" id="tab-nachos">
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-bowl"/></svg></div>
+            <div class="menu-card-info">
+              <h3>Taco Salad</h3>
+              <p>Crispy shell bowl with seasoned meat, lettuce, cheese, pico &amp; sour cream.</p>
+            </div>
+            <span class="menu-price">$14.05+</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-nachos"/></svg></div>
+            <div class="menu-card-info">
+              <h3>Nachos</h3>
+              <p>Loaded tortilla chips with queso, jalapeños, meat &amp; all the toppings.</p>
+            </div>
+            <span class="menu-price">$11.70+</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Family & Extras -->
+      <div class="tab-panel" id="tab-extras">
+        <div class="menu-grid">
+
+          <div class="menu-card featured">
+            <div class="menu-card-icon"><svg><use href="#icon-family"/></svg></div>
+            <div class="menu-card-info">
+              <h3>Family Pack</h3>
+              <p>Feed the whole crew — a generous assortment of tacos &amp; sides for the family.</p>
+            </div>
+            <span class="menu-price">$64.35</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-drink"/></svg></div>
+            <div class="menu-card-info">
+              <h3>Mexican Soda</h3>
+              <p>Jarritos or Topo Chico — classic Mexican refreshments.</p>
+            </div>
+            <span class="menu-price">$2.95</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-drink"/></svg></div>
+            <div class="menu-card-info">
+              <h3>Can Soda</h3>
+              <p>Assorted canned sodas — Coke, Sprite, and more.</p>
+            </div>
+            <span class="menu-price">$2.35</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-drink"/></svg></div>
+            <div class="menu-card-info">
+              <h3>Water</h3>
+              <p>Bottled water to keep it crisp and refreshing.</p>
+            </div>
+            <span class="menu-price">$2.35</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-plus"/></svg></div>
+            <div class="menu-card-info">
+              <h3>Extra Meat</h3>
+              <p>Add more of your favorite protein to any order.</p>
+            </div>
+            <span class="menu-price">$3.50</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card-icon"><svg><use href="#icon-shrimp"/></svg></div>
+            <div class="menu-card-info">
+              <h3>Extra Shrimp</h3>
+              <p>Can't get enough shrimp? We've got you.</p>
+            </div>
+            <span class="menu-price">$3.50</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORDER CTA BANNER ========== -->
+  <section class="order-banner" id="order">
+    <div class="container order-banner-inner">
+      <div>
+        <h2>Ready to Order?</h2>
+        <p>Pickup &amp; delivery available Tue–Fri 11:00am–7:20pm, Sat 2:00pm–7:20pm.</p>
+      </div>
+      <a
+        href="https://www.google.com/maps/place/Tacos+N'+Stuff,+86+Remsen+St,+Cohoes,+NY+12047"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-primary btn-lg"
+      >Order Now &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ========== REVIEWS ========== -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <span class="section-label">What People Say</span>
+      <h2 class="section-title">Customer Reviews</h2>
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"Absolutely the best tacos in the Capital Region. The quesabirria is next level — the consommé broth is incredibly rich and the meat just falls apart. We drive 30 minutes just to come here. Worth every mile."</p>
+          <div class="review-author">
+            <div class="review-avatar">KB</div>
+            <div>
+              <p class="review-name">Kayla Burek</p>
+              <p class="review-meta">Local Guide · Google Review</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"I've been to taquerias all over New York and this place holds its own with the best of them. The Korean Steak taco is an absolute revelation — never expected that combo but it works perfectly. Staff is friendly too."</p>
+          <div class="review-author">
+            <div class="review-avatar">FH</div>
+            <div>
+              <p class="review-name">Fred Humiston</p>
+              <p class="review-meta">Local Guide · Google Review</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"Ordered the Family Pack for a party and everyone was blown away. Huge portions, great quality, fair price. The veggie option is honestly so good that even my meat-loving husband keeps requesting it. Hidden gem in Cohoes!"</p>
+          <div class="review-author">
+            <div class="review-avatar">CJ</div>
+            <div>
+              <p class="review-name">Cynthia Jacobson</p>
+              <p class="review-meta">Local Guide · Google Review</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LOCATION ========== -->
+  <section class="section section-dark" id="location">
+    <div class="container">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-title">Location &amp; Hours</h2>
+      <div class="location-grid">
+        <div class="location-info">
+
+          <div class="info-block">
+            <h3>Address</h3>
+            <p>86 Remsen St<br />Cohoes, NY 12047</p>
+            <a
+              href="https://maps.google.com/?q=86+Remsen+St,+Cohoes,+NY+12047"
+              target="_blank"
+              rel="noopener"
+              class="map-link"
+            >Get Directions &rarr;</a>
+          </div>
+
+          <div class="info-block">
+            <h3>Pickup &amp; Delivery Hours</h3>
+            <div class="hours-table">
+              <div class="hours-row">
+                <span>Monday</span>
+                <span class="closed">Closed</span>
+              </div>
+              <div class="hours-row">
+                <span>Tuesday – Friday</span>
+                <div class="hours-col">
+                  <span class="accent">Pickup &nbsp;&nbsp;11:00am – 7:20pm</span>
+                  <span class="accent">Delivery 11:00am – 7:20pm</span>
+                </div>
+              </div>
+              <div class="hours-row">
+                <span>Saturday</span>
+                <div class="hours-col">
+                  <span class="accent">Pickup &nbsp;&nbsp;2:00pm – 7:20pm</span>
+                  <span class="accent">Delivery 2:00pm – 7:20pm</span>
+                </div>
+              </div>
+              <div class="hours-row">
+                <span>Sunday</span>
+                <span class="closed">Closed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h3>Rating</h3>
+            <div class="location-rating">
+              <span class="stars-gold large">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating-num">4.9</span>
+              <a
+                href="https://www.google.com/maps/place/Tacos+N'+Stuff,+86+Remsen+St,+Cohoes,+NY+12047"
+                target="_blank"
+                rel="noopener"
+                class="review-link"
+              >Read Reviews</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="map-placeholder">
+          <a
+            href="https://maps.google.com/?q=86+Remsen+St,+Cohoes,+NY+12047"
+            target="_blank"
+            rel="noopener"
+            class="map-embed-link"
+            aria-label="Open in Google Maps"
+          >
+            <div class="map-pin-icon">&#128205;</div>
+            <p>86 Remsen St, Cohoes, NY</p>
+            <span>Open in Google Maps &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#top" class="logo">Tacos N'&nbsp;<span>Stuff</span></a>
+      <p>&#169; 2025 Tacos N' Stuff &middot; 86 Remsen St, Cohoes, NY 12047</p>
+      <div class="footer-links">
+        <a href="#menu">Menu</a>
+        <a href="#location">Location</a>
+        <a href="#order">Order</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
