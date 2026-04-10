@@ -9,7 +9,7 @@ const closeSettingsBtn = document.getElementById("closeSettings");
 const settingsModal = document.getElementById("settingsModal");
 const themeHueInput = document.getElementById("themeHue");
 
-const year = document.getElementById("year");
+const year = document.getElementById("year"); 
 
 let lastActiveEl = null;
 
