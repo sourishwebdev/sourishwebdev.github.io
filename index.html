@@ -97,11 +97,61 @@
       </section>
 
       <footer class="footer">
-        <span class="muted">© <span id="year"></span> sourish</span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span class="muted">built simple</span>
+        <div class="footer-left">
+          <span class="muted">© <span id="year"></span> sourish</span>
+          <span class="sep" aria-hidden="true">·</span>
+          <span class="muted">built simple</span>
+        </div>
+
+        <div class="footer-right" aria-label="social links">
+          <a
+            class="icon-btn"
+            href="https://www.instagram.com/sourisharva/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="instagram"
+            title="instagram"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                fill="currentColor"
+                d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.75-2.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"
+              />
+            </svg>
+          </a>
+
+          <button
+            class="icon-btn"
+            type="button"
+            id="copyDiscord"
+            aria-label="copy discord username"
+            title="copy discord: sourishh"
+          >
+            <img class="icon-img" src="./image.png" alt="" aria-hidden="true" />
+          </button>
+
+          <a
+            class="icon-btn"
+            href="https://github.com/sourpatchkidsLS"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="github"
+            title="github"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                fill="currentColor"
+                d="M12 .7a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.1-3.2-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3.2 1.1a11 11 0 0 1 5.8 0c2.3-1.4 3.2-1.1 3.2-1.1.6 1.6.2 2.8.1 3.1.7.8 1.1 1.9 1.1 3.2 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A12 12 0 0 0 12 .7Z"
+              />
+            </svg>
+          </a>
+        </div>
       </footer>
     </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true">
+      username copied
+    </div>
 
     <div class="modal" id="projectsModal" role="dialog" aria-modal="true" aria-hidden="true">
       <div class="modal-backdrop" data-close="true" aria-hidden="true"></div>
