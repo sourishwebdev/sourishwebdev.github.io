@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>resume — sourish</title>
+    <meta name="description" content="resume — experience, leadership, and coursework" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+
+    <main class="wrap">
+      <header class="top">
+        <div class="brand">
+          <div class="dot" aria-hidden="true"></div>
+          <a class="name" href="../index.html">sourish</a>
+        </div>
+        <a class="btn btn-primary" href="../index.html">home</a>
+      </header>
+
+      <section class="hero resume-hero" aria-label="resume header">
+        <p class="kicker">resume</p>
+        <h1>experience, leadership, and coursework</h1>
+        <p class="sub">
+          finance operations, entrepreneurship, leadership, and quantitative coursework.
+        </p>
+      </section>
+
+      <div class="resume-stack">
+        <article class="card resume-card">
+          <h2>experience</h2>
+
+          <div class="resume-block">
+            <div class="resume-role">
+              accounting &amp; finance assistant
+              <span class="resume-hours">· 500+ hrs</span>
+            </div>
+            <div class="resume-org">american technology labs</div>
+            <ul class="list resume-bullets">
+              <li>
+                managed bookkeeping, invoicing, and expense tracking for a technology
+                company
+              </li>
+              <li>maintained accurate financial records for three consecutive years</li>
+              <li>
+                helped analyze monthly cash flow and prepared reports that supported
+                decision-making
+              </li>
+              <li>
+                learned real-world business operations, accounting, and financial
+                management alongside the team
+              </li>
+              <li><strong class="resume-metric">processed 200+ invoices annually</strong></li>
+            </ul>
+          </div>
+
+          <div class="resume-block resume-block--spaced">
+            <div class="resume-role">founder</div>
+            <div class="resume-org">resale business — variety of items</div>
+            <ul class="list resume-bullets">
+              <li>
+                built an online resale operation with roughly
+                <strong class="resume-metric">$4,500 profit</strong> across
+                <strong class="resume-metric">150+ transactions</strong>; tracked
+                inventory, optimized pricing, and followed market trends
+              </li>
+              <li>
+                scaled related resale activity into roughly the
+                <strong class="resume-metric">$3–5k</strong> range while iterating on
+                sourcing, listings, and fulfillment
+              </li>
+              <li>
+                developed entrepreneurship, marketing, and basic financial analysis
+                skills through hands-on ownership
+              </li>
+            </ul>
+          </div>
+
+          <div class="resume-block resume-block--spaced">
+            <div class="resume-role">founder</div>
+            <div class="resume-org">client website business — local businesses &amp; restaurants</div>
+            <ul class="list resume-bullets">
+              <li>
+                ran a client-based web design and development practice: scoping, building,
+                and shipping sites for real operators
+              </li>
+              <li>
+                delivered websites for
+                <strong class="resume-metric">8+ local businesses and restaurants</strong>
+              </li>
+              <li>
+                generated roughly
+                <strong class="resume-metric">$2.5k in profit</strong> while managing
+                timelines, revisions, and client communication
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card resume-card">
+          <h2>leadership &amp; activities</h2>
+          <ul class="list resume-bullets">
+            <li>
+              <strong class="resume-metric">student council treasurer</strong> —
+              appointed to attend regional conference
+            </li>
+            <li><strong class="resume-metric">key club</strong> — member</li>
+          </ul>
+        </article>
+
+        <article class="card resume-card">
+          <h2>coursework</h2>
+          <p class="muted resume-intro">selected high school courses</p>
+          <div class="chips resume-chips">
+            <span class="chip">intro to business 1</span>
+            <span class="chip">intro to business 2</span>
+            <span class="chip">algebra 1</span>
+            <span class="chip">geometry honors</span>
+            <span class="chip">algebra 2 honors</span>
+          </div>
+        </article>
+      </div>
+
+      <footer class="footer">
+        <span class="muted">© <span id="year"></span> sourish</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">/resume</span>
+      </footer>
+    </main>
+
+    <script>
+      const year = document.getElementById("year");
+      if (year) year.textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
